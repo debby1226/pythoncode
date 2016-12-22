@@ -1,0 +1,15 @@
+#捕捉课程的名称
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+html=urlopen("http://www.w3school.com.cn/tags/tag_div.asp")
+soup=BeautifulSoup(html,"html.parser")
+#print(bsObj)
+print("----------------------")
+#print(soup.find(id="menu").findAll("a"))
+t=soup.find(id="menu").findAll("a")
+for string in t:
+  t=""
+  t=t+repr(string)
+  ma=re.search('\".title.*\"',t)
+  print(ma.group())
