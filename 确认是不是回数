@@ -1,0 +1,37 @@
+//方法一
+//数字转列表
+def intchangelist(n):
+    c=str(n)
+    i=0
+    li=[]
+    while i<len(c):
+        li.append(c[i])
+        i=i+1
+    return li
+//检查列表是否可以前后的数字是否一样
+def check(a):
+    c=a
+    a.reverse()
+    if c==a:
+      return True
+    else:
+       return False
+
+def ispalindrome(n):
+    return check(intchangelist(n))
+    
+    
+//方法二
+
+def ispalindrome(n):
+  a=str(n)
+  i=0
+  while i<len(a):
+     b=""
+     b[i]=a[i]
+     i++
+  return  a==b
+  
+         
+   
+ 
