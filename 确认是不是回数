@@ -23,15 +23,21 @@ def ispalindrome(n):
     
 //方法二
 
-def ispalindrome(n):
-  a=str(n)
-  i=0
-  while i<len(a):
-     b=""
-     b[i]=a[i]
-     i++
-  return  a==b
-  
+ def is_palindrome(n):
+    d=str(n)
+    b=d
+    li=[]
+    li2=[]
+    i=0
+    while i <len(d):
+        li2.append(d[i])
+        li.append(d[i])
+        i=i+1
+    li.reverse()
+    if li2==li and len(li)>2:
+	    return n
+    else:
+	    pass
          
    
  
